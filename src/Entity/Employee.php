@@ -51,7 +51,7 @@ class Employee
 
     public function __toString()
     {
-        return $this->firstName . ' ' . $this->lastName;
+        return $this->firstName . ' ' . $this->lastName . ' - ' . $this->position;
     }
 
     public function getId(): ?int
