@@ -1,0 +1,9 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+    {% for employee in employees %}
+        <p>
+             <a href="{{ path('vacation_days', {id: employee.id}) }}">{{ employee }}</a>
+        </p>
+    {% endfor %}
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Total vacation days</th>
+            <th>Used days</th>
+            <th>Remaining days</th>
+        </tr>
+        <tr>
+            <td>{{ employee }}</td>
+            <td>{{ totalDays }}</td>
+            <td>{{ usedDays }}</td>
+            <td>{{ remainingDays }}</td>
+        </tr>
+    </table>
+    {% if vacations is not empty %}
+        <p>Periods:</p>
+        {% for vacation in vacations %}
+            {{ vacation }} <br>
+        {% endfor %}
+    {% endif %}
+{% endblock %}
